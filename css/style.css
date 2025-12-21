@@ -86,23 +86,16 @@ body {
     gap: 20px;
 }
 
-/* Logo: Monogram */
-.logo-monogram {
-    width: 42px;
-    height: 42px;
-    border: 1px solid var(--gold);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Outfit', serif;
-    /* Using Outfit for a cleaner look, or swap to serif */
-    font-weight: 700;
-    font-size: 16px;
-    color: var(--gold);
-    letter-spacing: -1px;
-    box-shadow: 0 0 15px rgba(197, 160, 89, 0.2);
-    /* Subtle glow */
+/* Logo: SVG CC */
+.logo-cc {
+    width: 48px;
+    height: 48px;
+    filter: drop-shadow(0 0 10px rgba(197, 160, 89, 0.4));
+    transition: filter 0.3s ease;
+}
+
+.home-id:hover .logo-cc {
+    filter: drop-shadow(0 0 20px rgba(197, 160, 89, 0.7));
 }
 
 .id-text {
