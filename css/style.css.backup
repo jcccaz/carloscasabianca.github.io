@@ -44,83 +44,46 @@ body {
     overflow: hidden;
 }
 
-/* REFINED HONEYCOMB BACKGROUND */
-/* REFINED HONEYCOMB BACKGROUND */
+/* MINIMAL HONEYCOMB BACKGROUND - Luxury Tech */
 .home::before {
     content: '';
     position: absolute;
     inset: 0;
-    /* Base honeycomb grid - subtle and organized - SCALED TO MATCH ACCENTS */
-    background-image: url("data:image/svg+xml,%3Csvg width='50' height='58' viewBox='0 0 50 58' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 5l25 14.43v28.87L25 62.74 0 48.3V19.43L25 5z' fill='none' stroke='%23c5a059' stroke-width='0.4' stroke-opacity='0.15'/%3E%3C/svg%3E");
-    background-size: 50px 58px;
+    /* Ultra-subtle hex grid - thin lines */
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='173' viewBox='0 0 100 173' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0l50 28.87v57.74L50 115.47 0 86.6V28.87L50 0z' fill='none' stroke='%23c5a059' stroke-width='0.3' stroke-opacity='0.06'/%3E%3C/svg%3E");
+    background-size: 100px 173px;
+    background-position: center;
+
     opacity: 1;
     pointer-events: none;
     z-index: 1;
 }
 
-/* ORGANIC 3D HONEYCOMB - Lit elements have depth/glow */
-/* ORGANIC 3D HONEYCOMB - Physical Relief Effect (Plates) */
-/* ORGANIC 3D HONEYCOMB - Lit elements have depth/glow */
-/* ORGANIC 3D HONEYCOMB - CONNECTED CLUSTERS (Backlit Plates) */
-/* ORGANIC 3D HONEYCOMB - INTEGRATED CIRCUIT FLOW */
-/* ORGANIC 3D HONEYCOMB - HIGHLIGHTED EDGES (Circuit Trace) */
-/* ORGANIC 3D HONEYCOMB - VARIABLE STROKE WIREFRAME */
-/* ORGANIC 3D HONEYCOMB - Cleared State */
-/* ORGANIC 3D HONEYCOMB - FLOWING ENERGY TRACES (Bioluminescent Veins) */
-/* ORGANIC 3D HONEYCOMB - FLOWING ENERGY TRACES (Bioluminescent Veins) */
-/* ORGANIC 3D HONEYCOMB - FLOWING ENERGY TRACES (Bioluminescent Veins) */
-/* ORGANIC 3D HONEYCOMB - FLOWING ENERGY TRACES (Bioluminescent Veins) */
-/* ORGANIC 3D HONEYCOMB - FLOWING ENERGY TRACES (Bioluminescent Veins) */
-/* ORGANIC 3D HONEYCOMB - FLOWING ENERGY TRACES (Bioluminescent Veins) */
+/* HONEYCOMB CLUSTERS - Asymmetric accent lighting */
 .home::after {
     content: '';
     position: absolute;
     inset: 0;
-    
-    /* 
-       DESIGN: "Energy flowing through a circuit board"
-       - Connected horizontal pathways snake across the grid.
-       - Edge lighting only (no fills).
-       - Varied intensity (pulsing trails).
-    */
+    /* Small honeycomb clusters with gold backlighting */
     background-image:
-        /* ========================================= */
-        /* TRACE 1: THE UPPER MAIN ARTERY            */
-        /* A long, snaking horizontal path (Zig-Zag) */
-        /* Flow: High -> Low -> High Intensity       */
-        /* ========================================= */
-        url("data:image/svg+xml,%3Csvg width='300' height='200' viewBox='0 0 300 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cfilter id='glow'%3E%3CfeDropShadow dx='0' dy='0' stdDeviation='2' flood-color='%23c5a059' flood-opacity='0.7'/%3E%3C/filter%3E%3C/defs%3E%3C!-- Node 1 (Start Dim) --%3E%3Cpath d='M25 5l25 14.43v28.87L25 62.74 0 48.3V19.43L25 5z' fill='none' stroke='%23c5a059' stroke-width='0.8' stroke-opacity='0.4' transform='translate(0, 20)'/%3E%3C!-- Node 2 (Bright Pulse - Down Right) --%3E%3Cpath d='M25 5l25 14.43v28.87L25 62.74 0 48.3V19.43L25 5z' fill='none' stroke='%23c5a059' stroke-width='1.5' stroke-opacity='0.9' filter='url(%23glow)' transform='translate(50, 48.8)'/%3E%3C!-- Node 3 (Dim Connector - Up Right) --%3E%3Cpath d='M25 5l25 14.43v28.87L25 62.74 0 48.3V19.43L25 5z' fill='none' stroke='%23c5a059' stroke-width='0.8' stroke-opacity='0.5' transform='translate(100, 20)'/%3E%3C!-- Node 4 (Bright Pulse - Down Right) --%3E%3Cpath d='M25 5l25 14.43v28.87L25 62.74 0 48.3V19.43L25 5z' fill='none' stroke='%23c5a059' stroke-width='1.2' stroke-opacity='0.85' filter='url(%23glow)' transform='translate(150, 48.8)'/%3E%3C!-- Node 5 (Fade Out - Up Right) --%3E%3Cpath d='M25 5l25 14.43v28.87L25 62.74 0 48.3V19.43L25 5z' fill='none' stroke='%23c5a059' stroke-width='0.6' stroke-opacity='0.3' transform='translate(200, 20)'/%3E%3C/svg%3E"),
+        /* Bottom-left cluster - 6 hexagons properly spaced */
+        url("data:image/svg+xml,%3Csvg width='180' height='210' viewBox='0 0 180 210' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 20l25 14.43v28.87L30 77.74 5 63.3V34.43L30 20z' fill='none' stroke='%23c5a059' stroke-width='1' stroke-opacity='0.35'/%3E%3Cpath d='M85 20l25 14.43v28.87L85 77.74 60 63.3V34.43L85 20z' fill='none' stroke='%23c5a059' stroke-width='1' stroke-opacity='0.3'/%3E%3Cpath d='M140 20l25 14.43v28.87L140 77.74 115 63.3V34.43L140 20z' fill='none' stroke='%23c5a059' stroke-width='1' stroke-opacity='0.25'/%3E%3Cpath d='M57.5 72l25 14.43v28.87L57.5 129.74 32.5 115.3V86.43L57.5 72z' fill='none' stroke='%23c5a059' stroke-width='1' stroke-opacity='0.28'/%3E%3Cpath d='M112.5 72l25 14.43v28.87L112.5 129.74 87.5 115.3V86.43L112.5 72z' fill='none' stroke='%23c5a059' stroke-width='1' stroke-opacity='0.22'/%3E%3Cpath d='M85 124l25 14.43v28.87L85 181.74 60 167.3V138.43L85 124z' fill='none' stroke='%23c5a059' stroke-width='1' stroke-opacity='0.2'/%3E%3C/svg%3E"),
+        /* Right mid cluster - 2 hexagons */
+        url("data:image/svg+xml,%3Csvg width='100' height='60' viewBox='0 0 100 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 0l25 14.43v28.87L25 57.74 0 43.3V14.43L25 0z' fill='none' stroke='%23c5a059' stroke-width='1.2' stroke-opacity='0.25'/%3E%3Cpath d='M75 0l25 14.43v28.87L75 57.74 50 43.3V14.43L75 0z' fill='none' stroke='%23c5a059' stroke-width='1.2' stroke-opacity='0.2'/%3E%3C/svg%3E"),
+        /* Gold glows behind clusters */
+        radial-gradient(ellipse 180px 180px at 12% 82%, rgba(197, 160, 89, 0.08) 0%, transparent 70%),
+        radial-gradient(ellipse 110px 110px at 90% 40%, rgba(197, 160, 89, 0.04) 0%, transparent 70%);
 
-        /* ========================================= */
-        /* TRACE 2: SECONDARY BRANCH (Mid-Left)      */
-        /* A shorter strand simulating a fork        */
-        /* ========================================= */
-        url("data:image/svg+xml,%3Csvg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'%3E%3C!-- Node 1 --%3E%3Cpath d='M25 5l25 14.43v28.87L25 62.74 0 48.3V19.43L25 5z' fill='none' stroke='%23c5a059' stroke-width='0.6' stroke-opacity='0.3' transform='translate(0, 0)'/%3E%3C!-- Node 2 (Active) --%3E%3Cpath d='M25 5l25 14.43v28.87L25 62.74 0 48.3V19.43L25 5z' fill='none' stroke='%23c5a059' stroke-width='1' stroke-opacity='0.7' transform='translate(50, 28.8)'/%3E%3C!-- Node 3 (Faint) --%3E%3Cpath d='M25 5l25 14.43v28.87L25 62.74 0 48.3V19.43L25 5z' fill='none' stroke='%23c5a059' stroke-width='0.5' stroke-opacity='0.2' transform='translate(100, 0)'/%3E%3C/svg%3E"),
-
-        /* ========================================= */
-        /* TRACE 3: DEEP BACKGROUND ECHO (Right)     */
-        /* Low intensity, purely structural          */
-        /* ========================================= */
-        url("data:image/svg+xml,%3Csvg width='150' height='150' viewBox='0 0 150 150' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 5l25 14.43v28.87L25 62.74 0 48.3V19.43L25 5z' fill='none' stroke='%23c5a059' stroke-width='0.5' stroke-opacity='0.2' transform='translate(0, 50)'/%3E%3Cpath d='M25 5l25 14.43v28.87L25 62.74 0 48.3V19.43L25 5z' fill='none' stroke='%23c5a059' stroke-width='0.5' stroke-opacity='0.3' transform='translate(50, 21.2)'/%3E%3C/svg%3E");
-
-
-    background-position: 
-        /* Trace 1 (Top Horizontal Flow - Spans center/right) */
-        65% 15%,
-        /* Trace 2 (Mid Left - Branching in) */
-        10% 25%,
-        /* Trace 3 (Right Edge Echo) */
-        95% 45%;
-        
+    background-position: 6% 76%, 88% 38%, 12% 82%, 90% 40%;
     background-repeat: no-repeat;
-    /* Large SVGs to capture the flowing paths */
-    background-size: 300px 200px, 200px 150px, 150px 150px;
-    
+    background-size: 180px 210px, 100px 60px, 180px 180px, 110px 110px;
+
     opacity: 1;
     pointer-events: none;
     z-index: 2;
 }
 
+/* TOP HEADER */
 .home-header {
     width: 100%;
     display: flex;
@@ -218,12 +181,52 @@ body {
 .smoke-plume {
     max-height: 85vh;
     opacity: 0.6;
-    /* Improved masking with smoother falloff - eliminates visible square */
-    -webkit-mask-image: radial-gradient(ellipse 70% 90% at center, black 40%, rgba(0, 0, 0, 0.8) 60%, transparent 100%);
-    mask-image: radial-gradient(ellipse 70% 90% at center, black 40%, rgba(0, 0, 0, 0.8) 60%, transparent 100%);
-
+    /* Soft edge fade to blend into black background */
+    -webkit-mask-image: radial-gradient(ellipse 65% 85% at center, black 30%, black 50%, transparent 90%);
+    mask-image: radial-gradient(ellipse 65% 85% at center, black 30%, black 50%, transparent 90%);
+    /* Ultra-slow atmospheric breathing */
+    animation: smokeDrift 30s infinite alternate ease-in-out;
+    will-change: transform, opacity;
 }
 
+.smoke-plume.billowing {
+    /* Gentle billowing reaction */
+    animation: smokeBillow 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
+}
+
+@keyframes smokeDrift {
+    0% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: scale(1.06);
+        opacity: 0.6;
+    }
+}
+
+@keyframes smokeBillow {
+    0% {
+        transform: scale(1) translateY(0);
+        opacity: 0.5;
+    }
+
+    35% {
+        transform: scale(1.1) translateY(-20px);
+        opacity: 0.2;
+    }
+
+    70% {
+        transform: scale(1.05) translateY(-35px);
+        opacity: 0.35;
+    }
+
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 0.5;
+    }
+}
 
 /* BOTTOM NAVIGATION (Conceptual) */
 .concept-nav {

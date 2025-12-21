@@ -1,0 +1,27 @@
+/* ORGANIC HONEYCOMB LIGHTING - Scattered individual hexagons */
+.home::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* Scattered hexagons with varied opacity for organic feel */
+    background-image:
+        /* Left side scattered hexagons */
+        url("data:image/svg+xml,%3Csvg width='50' height='58' viewBox='0 0 50 58' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 5l25 14.43v28.87L25 62.74 0 48.3V19.43L25 5z' fill='none' stroke='%23c5a059' stroke-width='1' stroke-opacity='0.25'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg width='50' height='58' viewBox='0 0 50 58' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 5l25 14.43v28.87L25 62.74 0 48.3V19.43L25 5z' fill='none' stroke='%23c5a059' stroke-width='1' stroke-opacity='0.18'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg width='50' height='58' viewBox='0 0 50 58' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 5l25 14.43v28.87L25 62.74 0 48.3V19.43L25 5z' fill='none' stroke='%23c5a059' stroke-width='1' stroke-opacity='0.3'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg width='50' height='58' viewBox='0 0 50 58' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 5l25 14.43v28.87L25 62.74 0 48.3V19.43L25 5z' fill='none' stroke='%23c5a059' stroke-width='1' stroke-opacity='0.15'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg width='50' height='58' viewBox='0 0 50 58' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 5l25 14.43v28.87L25 62.74 0 48.3V19.43L25 5z' fill='none' stroke='%23c5a059' stroke-width='1' stroke-opacity='0.22'/%3E%3C/svg%3E"),
+        /* Right side scattered hexagons */
+        url("data:image/svg+xml,%3Csvg width='50' height='58' viewBox='0 0 50 58' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 5l25 14.43v28.87L25 62.74 0 48.3V19.43L25 5z' fill='none' stroke='%23c5a059' stroke-width='1' stroke-opacity='0.2'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg width='50' height='58' viewBox='0 0 50 58' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 5l25 14.43v28.87L25 62.74 0 48.3V19.43L25 5z' fill='none' stroke='%23c5a059' stroke-width='1' stroke-opacity='0.12'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg width='50' height='58' viewBox='0 0 50 58' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 5l25 14.43v28.87L25 62.74 0 48.3V19.43L25 5z' fill='none' stroke='%23c5a059' stroke-width='1' stroke-opacity='0.28'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg width='50' height='58' viewBox='0 0 50 58' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 5l25 14.43v28.87L25 62.74 0 48.3V19.43L25 5z' fill='none' stroke='%23c5a059' stroke-width='1' stroke-opacity='0.16'/%3E%3C/svg%3E");
+
+    background-position: 8% 75%, 12% 85%, 15% 68%, 6% 80%, 10% 72%, 88% 35%, 92% 45%, 85% 28%, 90% 40%;
+    background-repeat: no-repeat;
+    background-size: 50px 58px;
+
+    opacity: 1;
+    pointer-events: none;
+    z-index: 2;
+}
