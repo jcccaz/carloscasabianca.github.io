@@ -1,0 +1,501 @@
+/* 
+   MASTER DESIGN SYSTEM: ARCHIVAL SYSTEMS
+   Theme: Graphite & Gold
+   Background: Subtle Honeycomb Mesh
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;800&family=JetBrains+Mono:wght@300&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+    --bg: #0c0c0d;
+    --text: #e8e8e8;
+    --gold: #c5a059;
+    --gold-glow: rgba(197, 160, 89, 0.4);
+    --font-display: 'Outfit', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* BASE */
+body {
+    font-family: var(--font-display);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* HOME PAGE */
+.home {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* MINIMAL HONEYCOMB BACKGROUND - Luxury Tech */
+.home::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* Ultra-subtle hex grid - thin lines */
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='173' viewBox='0 0 100 173' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0l50 28.87v57.74L50 115.47 0 86.6V28.87L50 0z' fill='none' stroke='%23c5a059' stroke-width='0.3' stroke-opacity='0.06'/%3E%3C/svg%3E");
+    background-size: 100px 173px;
+    background-position: center;
+
+    opacity: 1;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* HONEYCOMB CLUSTERS - Asymmetric accent lighting */
+.home::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* Small honeycomb clusters with gold backlighting */
+    background-image:
+        /* Bottom-left cluster - 6 hexagons properly spaced */
+        url("data:image/svg+xml,%3Csvg width='180' height='210' viewBox='0 0 180 210' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 20l25 14.43v28.87L30 77.74 5 63.3V34.43L30 20z' fill='none' stroke='%23c5a059' stroke-width='1' stroke-opacity='0.35'/%3E%3Cpath d='M85 20l25 14.43v28.87L85 77.74 60 63.3V34.43L85 20z' fill='none' stroke='%23c5a059' stroke-width='1' stroke-opacity='0.3'/%3E%3Cpath d='M140 20l25 14.43v28.87L140 77.74 115 63.3V34.43L140 20z' fill='none' stroke='%23c5a059' stroke-width='1' stroke-opacity='0.25'/%3E%3Cpath d='M57.5 72l25 14.43v28.87L57.5 129.74 32.5 115.3V86.43L57.5 72z' fill='none' stroke='%23c5a059' stroke-width='1' stroke-opacity='0.28'/%3E%3Cpath d='M112.5 72l25 14.43v28.87L112.5 129.74 87.5 115.3V86.43L112.5 72z' fill='none' stroke='%23c5a059' stroke-width='1' stroke-opacity='0.22'/%3E%3Cpath d='M85 124l25 14.43v28.87L85 181.74 60 167.3V138.43L85 124z' fill='none' stroke='%23c5a059' stroke-width='1' stroke-opacity='0.2'/%3E%3C/svg%3E"),
+        /* Right mid cluster - 2 hexagons */
+        url("data:image/svg+xml,%3Csvg width='100' height='60' viewBox='0 0 100 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 0l25 14.43v28.87L25 57.74 0 43.3V14.43L25 0z' fill='none' stroke='%23c5a059' stroke-width='1.2' stroke-opacity='0.25'/%3E%3Cpath d='M75 0l25 14.43v28.87L75 57.74 50 43.3V14.43L75 0z' fill='none' stroke='%23c5a059' stroke-width='1.2' stroke-opacity='0.2'/%3E%3C/svg%3E"),
+        /* Gold glows behind clusters */
+        radial-gradient(ellipse 180px 180px at 12% 82%, rgba(197, 160, 89, 0.08) 0%, transparent 70%),
+        radial-gradient(ellipse 110px 110px at 90% 40%, rgba(197, 160, 89, 0.04) 0%, transparent 70%);
+
+    background-position: 6% 76%, 88% 38%, 12% 82%, 90% 40%;
+    background-repeat: no-repeat;
+    background-size: 180px 210px, 100px 60px, 180px 180px, 110px 110px;
+
+    opacity: 1;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* TOP HEADER */
+.home-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.home-id {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Logo: Diamond Brand Mark */
+.logo-diamond {
+    width: 32px;
+    height: 32px;
+    border: 1.5px solid var(--gold);
+    transform: rotate(45deg);
+    position: relative;
+}
+
+.logo-diamond::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    border: 1px solid var(--gold);
+}
+
+.home-id h1 {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    color: var(--gold);
+}
+
+/* SECONDARY NAV (Top Right) */
+.secondary-nav {
+    display: flex;
+    gap: 32px;
+    z-index: 100;
+}
+
+.secondary-nav a {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    position: relative;
+}
+
+.secondary-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: width 0.5s ease;
+}
+
+.secondary-nav a:hover {
+    opacity: 1;
+}
+
+.secondary-nav a:hover::after {
+    width: 100%;
+}
+
+/* CENTER VOLUME */
+.home-center-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.smoke-plume {
+    max-height: 85vh;
+    opacity: 0.6;
+    /* Soft edge fade to blend into black background */
+    -webkit-mask-image: radial-gradient(ellipse 65% 85% at center, black 30%, black 50%, transparent 90%);
+    mask-image: radial-gradient(ellipse 65% 85% at center, black 30%, black 50%, transparent 90%);
+    /* Ultra-slow atmospheric breathing */
+    animation: smokeDrift 30s infinite alternate ease-in-out;
+    will-change: transform, opacity;
+}
+
+.smoke-plume.billowing {
+    /* Gentle billowing reaction */
+    animation: smokeBillow 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
+}
+
+@keyframes smokeDrift {
+    0% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: scale(1.06);
+        opacity: 0.6;
+    }
+}
+
+@keyframes smokeBillow {
+    0% {
+        transform: scale(1) translateY(0);
+        opacity: 0.5;
+    }
+
+    35% {
+        transform: scale(1.1) translateY(-20px);
+        opacity: 0.2;
+    }
+
+    70% {
+        transform: scale(1.05) translateY(-35px);
+        opacity: 0.35;
+    }
+
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 0.5;
+    }
+}
+
+/* BOTTOM NAVIGATION (Conceptual) */
+.concept-nav {
+    display: flex;
+    gap: 80px;
+    z-index: 100;
+}
+
+.concept-item {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.4s ease;
+}
+
+.concept-item::before {
+    content: '';
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--gold);
+    opacity: 0.3;
+    transform: rotate(45deg);
+    transition: all 0.4s ease;
+}
+
+.concept-item:hover::before {
+    opacity: 1;
+    box-shadow: 0 0 20px var(--gold-glow);
+}
+
+.concept-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--gold);
+    opacity: 0.6;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+}
+
+.concept-item:hover .concept-label {
+    opacity: 1;
+    text-shadow: 0 0 10px var(--gold-glow);
+}
+
+/* INTERIOR PAGES MASTER STYLE */
+.section-hero {
+    background: transparent;
+    padding: 120px 24px 80px;
+    text-align: center;
+}
+
+.section-hero h1 {
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 16px;
+    color: var(--gold);
+}
+
+.section-hero p {
+    font-size: 18px;
+    opacity: 0.7;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.article-hero {
+    padding: 120px 24px 60px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.article-hero h1 {
+    font-size: 42px;
+    font-weight: 300;
+    color: var(--gold);
+    margin-bottom: 16px;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+}
+
+.content h2 {
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--gold);
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
+
+.content p {
+    margin-bottom: 24px;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.content ul {
+    margin-bottom: 32px;
+    padding-left: 20px;
+}
+
+.content li {
+    margin-bottom: 12px;
+}
+
+.note-meta {
+    margin-bottom: 40px;
+}
+
+.project-meta,
+.note-id,
+.meta {
+    font-family: var(--font-mono);
+    color: var(--gold);
+    opacity: 0.6;
+    font-size: 11px;
+}
+
+p,
+li {
+    color: white;
+    opacity: 0.85;
+}
+
+/* GLOBAL LINK STYLES */
+a {
+    color: var(--gold);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: white;
+}
+
+/* HR ELEMENTS - HIDDEN */
+hr {
+    display: none;
+}
+
+/* NOTES LIST */
+.notes-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+}
+
+.note-item {
+    margin-bottom: 32px;
+    padding-left: 0;
+    border-left: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.note-item:hover {
+    padding-left: 16px;
+    border-left-color: var(--gold);
+}
+
+.note-link {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.note-text {
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+/* PROJECT ITEMS */
+.project {
+    margin-bottom: 48px;
+}
+
+.project h2 {
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+.project-links {
+    margin-top: 16px;
+    display: flex;
+    gap: 24px;
+}
+
+.project-links a {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+}
+
+.project-links a:hover {
+    opacity: 1;
+}
+
+/* LEAK PAGE */
+.leak {
+    background: #050505;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.leak-canvas {
+    position: relative;
+    max-width: 600px;
+}
+
+.leak-volume {
+    width: 100%;
+    opacity: 0.5;
+}
+
+.leak-text {
+    margin-top: 40px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--gold);
+    opacity: 0.4;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    animation: leakFade 4s infinite alternate ease-in-out;
+}
+
+.leak-exit {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--gold);
+    opacity: 0.2;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.leak-exit:hover {
+    opacity: 0.4;
+    color: white;
+}
+
+@keyframes leakFade {
+    0% {
+        opacity: 0.2;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0.6;
+        transform: translateY(-5px);
+    }
+}
