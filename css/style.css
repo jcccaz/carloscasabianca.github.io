@@ -1,3 +1,11 @@
+/* 
+   MASTER DESIGN SYSTEM: ARCHIVAL SYSTEMS
+   Theme: Graphite & Gold
+   Background: Subtle Honeycomb Mesh
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;800&family=JetBrains+Mono:wght@300&display=swap');
+
 /* RESET */
 * {
     margin: 0;
@@ -7,316 +15,485 @@
 
 /* VARIABLES */
 :root {
-    --bg: #0b0e11;
-    --text: #e6e6e6;
-    --muted: #9aa0a6;
-    --line: rgba(255, 255, 255, 0.08);
+    --bg: #0c0c0d;
+    --text: #e8e8e8;
+    --gold: #c5a059;
+    --gold-glow: rgba(197, 160, 89, 0.4);
+    --font-display: 'Outfit', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
 }
 
 /* BASE */
 body {
+    font-family: var(--font-display);
     background: var(--bg);
     color: var(--text);
-    font-family: Inter, system-ui, sans-serif;
-    line-height: 1.65;
+    line-height: 1.6;
+    min-height: 100vh;
 }
 
-/* HOME */
+/* HOME PAGE */
 .home {
-    background:
-        linear-gradient(90deg, rgba(11, 14, 17, 0.9) 10%, rgba(11, 14, 17, 0.4) 50%, rgba(11, 14, 17, 0.8) 100%),
-        url("../assets/images/hero-home.jpg") center/cover no-repeat;
-    height: 100vh;
-}
-
-.home-center {
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-left: 10%;
-}
-
-.home h1 {
-    font-size: 72px;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-}
-
-.tagline {
-    font-size: 18px;
-    margin-top: 12px;
-    color: var(--muted);
-}
-
-.enter {
-    margin-top: 40px;
-    text-decoration: none;
-    color: var(--text);
-    border-bottom: 1px solid var(--text);
-    width: fit-content;
-}
-
-/* SECTION HERO */
-.section-hero {
-    background:
-        linear-gradient(to bottom,
-            rgba(11, 14, 17, 0.85),
-            rgba(11, 14, 17, 1)),
-        url("../assets/images/hero-home.jpg") center/cover no-repeat;
-
-    padding: 120px 24px 80px;
-    text-align: center;
-}
-
-.section-hero h1 {
-    font-size: 40px;
-    font-weight: 600;
-}
-
-.section-hero .back {
-    position: absolute;
-    top: 24px;
-    left: 24px;
-    color: var(--muted);
-    text-decoration: none;
-}
-
-/* ARTICLE HERO */
-.article-hero {
-    background:
-        linear-gradient(to bottom,
-            rgba(11, 14, 17, 0.9),
-            rgba(11, 14, 17, 1)),
-        url("../assets/images/hero-home.jpg") center/cover no-repeat;
-
-    height: 220px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 60px;
     position: relative;
-}
-
-.article-hero .back {
-    position: absolute;
-    top: 24px;
-    left: 24px;
-    color: var(--muted);
-    text-decoration: none;
-}
-
-/* PROJECTS */
-.project {
-    margin-bottom: 64px;
-}
-
-.project-meta {
-    color: var(--muted);
-    margin-top: 8px;
-    margin-bottom: 24px;
-}
-
-.project-links {
-    list-style: none;
-    display: flex;
-    gap: 24px;
-    margin-top: 16px;
-}
-
-.project-links a {
-    text-decoration: none;
-    color: var(--muted);
-    border-bottom: 1px solid transparent;
-}
-
-.project-links a:hover {
-    border-bottom: 1px solid var(--muted);
-}
-
-/* NOTES */
-.notes-list {
-    list-style: none;
-    margin-top: 64px;
-}
-
-.notes-list li {
-    margin-bottom: 32px;
-}
-
-.notes-list a {
-    text-decoration: none;
-    color: var(--text);
-    display: flex;
-    gap: 24px;
-}
-
-.note-id {
-    color: var(--muted);
-    font-family: monospace;
-    font-size: 13px;
-    min-width: 120px;
-}
-
-/* NOTE METADATA */
-.note-body {
-    display: flex;
-    flex-direction: column;
-}
-
-.note-text {
-    max-width: 520px;
-    font-size: 18px;
-}
-
-.note-meta {
-    margin-top: 6px;
-    font-size: 13px;
-    color: var(--muted);
-}
-
-.note-meta time {
-    font-family: inherit;
-}
-
-.tag {
-    font-family: monospace;
-    font-size: 12px;
-    margin-left: 6px;
-}
-
-.dot {
-    margin: 0 6px;
-}
-
-.content .note-id {
-    color: var(--muted);
-    font-family: monospace;
-    font-size: 13px;
-}
-
-/* NAV */
-.top-nav {
-    padding: 24px;
-}
-
-.top-nav a {
-    color: var(--muted);
-    text-decoration: none;
-}
-
-/* LAYOUT */
-.container {
-    max-width: 720px;
-    margin: 80px auto;
-    padding: 0 24px;
-}
-
-.section-list {
-    list-style: none;
-    margin-top: 64px;
-}
-
-.section-list li {
-    margin-bottom: 48px;
-}
-
-.section-list a {
-    text-decoration: none;
-    color: var(--text);
-}
-
-.section-list p {
-    color: var(--muted);
-    margin-top: 8px;
-}
-
-/* CONTENT */
-.content {
-    max-width: 720px;
-    margin: 80px auto;
-    padding: 0 24px;
-}
-
-.meta {
-    color: var(--muted);
-    margin-top: 8px;
-}
-
-hr {
-    border: none;
-    border-top: 1px solid var(--line);
-    margin: 48px 0;
-}
-
-h2 {
-    margin-top: 48px;
-    margin-bottom: 16px;
-}
-
-/* LEAK VIEW */
-body.leak {
-    background: #0b0e11;
     overflow: hidden;
+    /* 3D DEPTH: Radial spotlight to create a 'deep room' feel */
+    background: radial-gradient(circle at center, #1a1a1d 0%, #050505 100%);
 }
 
-.leak-canvas {
-    height: 100vh;
-    width: 100vw;
-    position: relative;
+/* REFINED HONEYCOMB BACKGROUND */
+.home::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* 
+       Clean Gold Honeycomb Grid - ENHANCED VISIBILITY
+       - Gold stroke (#c5a059)
+       - HIGHER Opacity (0.5) to catch the radiant "light" from the center
+    */
+    background-image: url("data:image/svg+xml,%3Csvg width='50' height='58' viewBox='0 0 50 58' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 5l25 14.43v28.87L25 62.74 0 48.3V19.43L25 5z' fill='none' stroke='%23c5a059' stroke-width='0.5' stroke-opacity='0.5'/%3E%3C/svg%3E");
+    background-size: 50px 58px;
+    background-position: top center;
+    opacity: 1;
+    pointer-events: none;
+    z-index: 1;
+
+    /* 
+       RADIANT FADE MASK
+       The grid is fully visible in the center (black) and fades to transparent (invisible) at the edges.
+    */
+    -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 90%);
+    mask-image: radial-gradient(circle at center, black 30%, transparent 90%);
+}
+
+/* ORGANIC 3D HONEYCOMB - Lit elements have depth/glow */
+.home-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.home-id {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Logo: Monogram */
+.logo-monogram {
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Outfit', serif;
+    /* Using Outfit for a cleaner look, or swap to serif */
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--gold);
+    letter-spacing: -1px;
+    box-shadow: 0 0 15px rgba(197, 160, 89, 0.2);
+    /* Subtle glow */
 }
 
-.leak-volume {
-    max-width: 420px;
-    opacity: 0.85;
-    filter: blur(0.2px);
+.id-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.leak-text {
-    position: absolute;
-    max-width: 360px;
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1.6;
-    opacity: 0.35;
-    transition: opacity 0.6s ease;
+.home-id h1 {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--gold);
+    line-height: 1.2;
 }
 
-/* STILLNESS REVEAL */
-body.leak:hover .leak-text {
-    opacity: 0.35;
+.header-subline {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--gold);
+    opacity: 0.5;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
 }
 
-body.leak:not(:hover) .leak-text {
-    opacity: 0.6;
+/* SECONDARY NAV (Top Right) */
+.secondary-nav {
+    display: flex;
+    gap: 32px;
+    z-index: 100;
 }
 
-.leak-link {
-    margin-top: 120px;
-    text-align: center;
-}
-
-.leak-link a {
-    text-decoration: none;
+.secondary-nav a {
+    font-family: var(--font-mono);
     font-size: 11px;
-    color: rgba(255, 255, 255, 0.05);
-    /* Extremely subtle */
-    transition: color 0.5s;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    position: relative;
 }
 
-.leak-link a:hover {
-    color: var(--muted);
+.secondary-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: width 0.5s ease;
+}
+
+.secondary-nav a:hover {
+    opacity: 1;
+}
+
+.secondary-nav a:hover::after {
+    width: 100%;
+}
+
+/* CENTER VOLUME */
+.home-center-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.smoke-plume {
+    max-height: 80vh;
+    opacity: 0.6;
+    /* 
+       Seamless Masking 
+       Aggressive fade-out to transparent (70%) to strictly eliminate any hard square edges 
+       against the dark background.
+    */
+    -webkit-mask-image: radial-gradient(circle at center, black 0%, black 40%, transparent 70%);
+    mask-image: radial-gradient(circle at center, black 0%, black 40%, transparent 70%);
+    mix-blend-mode: screen;
+    /* clearer blend with background */
+}
+
+
+/* BOTTOM NAVIGATION (Conceptual) */
+.concept-nav {
+    display: flex;
+    gap: 80px;
+    z-index: 100;
+}
+
+.concept-item {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.4s ease;
+}
+
+.concept-item::before {
+    content: '';
+    width: 1px;
+    height: 50px;
+    background: var(--gold);
+    opacity: 0.3;
+    transition: all 0.4s ease;
+}
+
+.concept-item:hover::before {
+    opacity: 1;
+    box-shadow: 0 0 25px var(--gold), 0 0 10px var(--gold);
+    /* Stronger double glow */
+}
+
+.concept-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--gold);
+    opacity: 0.6;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+}
+
+.concept-item:hover .concept-label {
+    opacity: 1;
+    text-shadow: 0 0 10px var(--gold-glow);
+}
+
+/* INTERIOR PAGES MASTER STYLE */
+/* INTERIOR PAGES MASTER STYLE */
+.section-hero {
+    background: transparent;
+    padding: 120px 24px 80px;
+    text-align: left;
+    /* WAS CENTER */
+}
+
+.section-hero h1 {
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 16px;
+    color: var(--gold);
+}
+
+.section-hero p {
+    font-size: 18px;
+    opacity: 0.7;
+    max-width: 600px;
+    margin: 0;
+    /* WAS 0 auto */
+}
+
+.article-hero {
+    padding: 120px 24px 60px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    /* Ensure article headers are also left */
+}
+
+.article-hero h1 {
+    font-size: 42px;
+    font-weight: 300;
+    color: var(--gold);
+    margin-bottom: 16px;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+}
+
+.content h2 {
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--gold);
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
+
+.content p {
+    margin-bottom: 24px;
+    font-size: 17px;
+    line-height: 1.8;
 }
 
 .content ul {
-    margin: 24px 0;
+    margin-bottom: 32px;
     padding-left: 20px;
 }
 
 .content li {
+    margin-bottom: 12px;
+}
+
+.note-meta {
+    margin-bottom: 40px;
+}
+
+.project-meta,
+.note-id,
+.meta {
+    font-family: var(--font-mono);
+    color: var(--gold);
+    opacity: 0.6;
+    font-size: 11px;
+}
+
+p,
+li {
+    color: white;
+    opacity: 0.85;
+}
+
+/* GLOBAL LINK STYLES */
+a {
+    color: var(--gold);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: white;
+}
+
+/* HR ELEMENTS - HIDDEN */
+hr {
+    display: none;
+}
+
+/* NOTES LIST */
+.notes-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+}
+
+.note-item {
+    margin-bottom: 32px;
+    padding-left: 0;
+    border-left: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.note-item:hover {
+    padding-left: 16px;
+    border-left-color: var(--gold);
+}
+
+.note-link {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
     margin-bottom: 8px;
 }
 
-p {
-    margin-bottom: 16px;
+.note-text {
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+/* PROJECT ITEMS */
+.project {
+    margin-bottom: 48px;
+}
+
+.project h2 {
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+.project-links {
+    margin-top: 16px;
+    display: flex;
+    gap: 24px;
+}
+
+.project-links a {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+}
+
+.project-links a:hover {
+    opacity: 1;
+}
+
+/* LEAK PAGE */
+.leak {
+    background: radial-gradient(circle at center, #1a1a1d 0%, #050505 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    /* Leak specific font styles */
+    color: var(--text);
+}
+
+.leak::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* Clean Gold Honeycomb Grid - Inherited from Home but GHOSTLY */
+    background-image: url("data:image/svg+xml,%3Csvg width='50' height='58' viewBox='0 0 50 58' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 5l25 14.43v28.87L25 62.74 0 48.3V19.43L25 5z' fill='none' stroke='%23c5a059' stroke-width='0.5' stroke-opacity='0.5'/%3E%3C/svg%3E");
+    background-size: 50px 58px;
+    background-position: top center;
+    /* 
+       "DIMMED LIGHTS": Drastically reduced opacity (0.1) 
+       This makes the grid barely visible, like a faint echo.
+    */
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 0;
+    /* Inherit Radiant Mask */
+    -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 90%);
+    mask-image: radial-gradient(circle at center, black 30%, transparent 90%);
+}
+
+.leak-canvas {
+    position: relative;
+    max-width: 600px;
+    z-index: 2;
+    /* Content sits ABOVE the ghostly grid */
+}
+
+.leak-volume {
+    width: 100%;
+    opacity: 0.5;
+}
+
+.leak-text {
+    margin-top: 40px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--gold);
+    opacity: 0.4;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    animation: leakFade 4s infinite alternate ease-in-out;
+}
+
+.leak-exit {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--gold);
+    opacity: 0.2;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.leak-exit:hover {
+    opacity: 0.4;
+    color: white;
+}
+
+@keyframes leakFade {
+    0% {
+        opacity: 0.2;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0.6;
+        transform: translateY(-5px);
+    }
 }

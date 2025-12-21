@@ -1,29 +1,38 @@
-# Personal Site — Carlos Casabianca
+# Carlos Casabianca — Personal Site
 
-A minimalist, focused personal website structured as an internal documentation system.
+A digital portfolio structured as an internal system archive.
+
+## 🎨 Design System: "Gold Noir"
+A high-contrast, professional aesthetic inspired by system architecture and premium noir interfaces.
+
+### 1. Visual Identity
+- **Primary Colors**: Deep Graphite Gradient (`#1a1a1d` → `#050505`).
+- **Accent Color**: Metallic Gold (`#c5a059`).
+- **Texture**: 
+  - **Honeycomb Grid**: A uniform gold mesh (`opacity: 0.5`) with a radiant fade-out mask.
+  - **Atmosphere**: Floating smoke plume with seamless masking (`screen` blend mode).
+
+### 2. Navigation & Interaction
+- **Header**: Circular "CC" Monogram + Location Coordinates (`NOVA · 38.90° N...`).
+- **Menu**: Vertical Gold Lines ("Sensors") that glow on hover, replacing standard links.
+- **Typography**: 
+  - **Headings**: `Outfit` (Clean, Modern).
+  - **Data/Meta**: `JetBrains Mono` (Technical, Terminal-style).
+
+### 3. Special Views
+- **Home**: The "Showroom". Polished, bright gold mesh, 3D spotlight.
+- **Leak View**: The "Backstage" / "Server Room". 
+  - **Concept**: Unresolved, raw material.
+  - **Style**: "Lights Dimmed". The honeycomb grid is reduced to `10% opacity` ("Ghost Grid").
+  - **Access**: Hidden link at the bottom of the Fragments page.
 
 ## 🧱 Project Structure
-
-- **Home**: Entrance point with core tagline.
-- **Library**: Central index for Papers, Projects, Notes, and Talks.
-- **Projects**: Focus on FrankNet, AI Ops, and Knowledge Archive.
-- **Notes**: A collection of fragments and short thoughts with standardized taxonomy.
-- **Leak**: A diagnostic volumetric view of unresolved material.
+- **Home**: Entrance point with Core Identity.
+- **Library**: Central index for Papers, Projects, Notes.
+- **Fragments (Notes)**: Left-aligned technical stream of thoughts.
+- **Leak**: Diagnostic volumetric view of unresolved material.
 
 ## 🛠️ Tech Stack
-
-- **HTML5/CSS3**: Vanilla implementation for restraint and speed.
-- **Typography**: Inter (Sans-serif) and Monospace for technical metadata.
-- **Design**: Dark mode, glassmorphism, and minimal tabular layouts.
-
-## 🚀 Development
-
-### Prerequisites
-- [Git](https://git-scm.com/download/win) installed.
-
-### Setup locally
-1. Clone the repository.
-2. Open `index.html` in any modern browser.
-
-### Git Version Control
-If you see the error `git : The term 'git' is not recognized`, it means Git is not installed on your system. Please download it from [git-scm.com](https://git-scm.com/download/win).
+- **Core**: Vanilla HTML5/CSS3 (No frameworks, high performance).
+- **Fonts**: Google Fonts (`Outfit`, `JetBrains Mono`).
+- **Effects**: CSS `mix-blend-mode`, SVG Data URIs, Radial Gradients.

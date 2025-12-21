@@ -3,80 +3,60 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Notes — Carlos Casabianca</title>
+    <title>Fragments — Carlos Casabianca</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;800&family=JetBrains+Mono:wght@300&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
     <header class="section-hero">
-        <a href="library.html" class="back">← Library</a>
-        <h1>Notes</h1>
+        <a href="index.html" class="back">← Home</a>
+        <h1>Fragments</h1>
     </header>
 
     <main class="container">
 
-        <ul class="notes-list">
-            <li>
-                <a href="notes/fragment-001.html">
-                    <span class="note-id">FRAGMENT 001</span>
-
-                    <span class="note-body">
-                        <span class="note-text">
-                            Consistency failures often look like confidence.
-                        </span>
-
-                        <span class="note-meta">
-                            <time datetime="2025-12-18">Dec 18, 2025</time>
-                            <span class="dot">·</span>
-                            <span class="tag">systems</span>
-                            <span class="tag">ai</span>
-                        </span>
-                    </span>
+        <div class="notes-list">
+            <article class="note-item">
+                <a href="notes/fragment-001.html" class="note-link">
+                    <span class="note-id">001</span>
+                    <div>
+                        <p class="note-text">Consistency failures often look like confidence.</p>
+                        <span class="meta">Dec 18, 2025 · systems · ai</span>
+                    </div>
                 </a>
-            </li>
+            </article>
 
-            <li>
-                <a href="notes/fragment-002.html">
-                    <span class="note-id">FRAGMENT 002</span>
-
-                    <span class="note-body">
-                        <span class="note-text">
-                            Most systems fail quietly before they fail publicly.
-                        </span>
-
-                        <span class="note-meta">
-                            <time datetime="2025-12-12">Dec 12, 2025</time>
-                            <span class="dot">·</span>
-                            <span class="tag">security</span>
-                            <span class="tag">operations</span>
-                        </span>
-                    </span>
+            <article class="note-item">
+                <a href="notes/fragment-002.html" class="note-link">
+                    <span class="note-id">002</span>
+                    <div>
+                        <p class="note-text">Most systems fail quietly before they fail publicly.</p>
+                        <span class="meta">Dec 12, 2025 · security · operations</span>
+                    </div>
                 </a>
-            </li>
+            </article>
 
-            <li>
-                <a href="notes/fragment-003.html">
-                    <span class="note-id">FRAGMENT 003</span>
-
-                    <span class="note-body">
-                        <span class="note-text">
-                            Documentation is a form of delayed thinking.
-                        </span>
-
-                        <span class="note-meta">
-                            <time datetime="2025-11-30">Nov 30, 2025</time>
-                            <span class="dot">·</span>
-                            <span class="tag">writing</span>
-                            <span class="tag">design</span>
-                        </span>
-                    </span>
+            <article class="note-item">
+                <a href="notes/fragment-003.html" class="note-link">
+                    <span class="note-id">003</span>
+                    <div>
+                        <p class="note-text">Documentation is a form of delayed thinking.</p>
+                        <span class="meta">Nov 30, 2025 · writing · design</span>
+                    </div>
                 </a>
-            </li>
-        </ul>
+            </article>
+        </div>
 
-        <div class="leak-link">
-            <a href="leak.html">unresolved material</a>
+        <div style="margin-top: 120px; text-align: center;">
+            <a href="leak.html"
+                style="font-family: var(--font-mono); font-size: 10px; opacity: 0.2; letter-spacing: 0.2em; text-transform: uppercase;">unresolved
+                material</a>
         </div>
     </main>
 
