@@ -1,6 +1,3 @@
-// Premium Interactivity for Personal Site
-
-@"
 document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('.concept-item, .secondary-nav a');
     const smokePlume = document.querySelector('.smoke-plume');
@@ -16,4 +13,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-"@ | Out-File -FilePath app.js -Encoding UTF8
