@@ -195,6 +195,40 @@ body {
     /* clearer blend with background */
 }
 
+.smoke-plume {
+    max-height: 80vh;
+    opacity: 0.6;
+    -webkit-mask-image: radial-gradient(circle at center, black 0%, black 40%, transparent 70%);
+    mask-image: radial-gradient(circle at center, black 0%, black 40%, transparent 70%);
+    mix-blend-mode: screen;
+}
+
+.smoke-plume.billowing {
+    animation: smokeBillow 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
+}
+
+@keyframes smokeBillow {
+    0% {
+        transform: scale(1) translate(0, 0) rotate(0deg);
+        opacity: 0.5;
+    }
+
+    35% {
+        transform: scale(1.08) translate(-8px, -20px) rotate(-2deg);
+        opacity: 0.25;
+    }
+
+    70% {
+        transform: scale(1.04) translate(12px, -35px) rotate(1deg);
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: scale(1) translate(0, 0) rotate(0deg);
+        opacity: 0.5;
+    }
+}
+
 
 /* BOTTOM NAVIGATION (Conceptual) */
 .concept-nav {
