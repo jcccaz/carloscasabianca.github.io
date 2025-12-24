@@ -677,6 +677,8 @@ hr {
 .project-file {
     position: relative;
     display: grid;
+    width: 100%;
+    /* FORCE FULL WIDTH */
     grid-template-columns: 80px 1fr 150px;
     align-items: center;
     align-items: center;
