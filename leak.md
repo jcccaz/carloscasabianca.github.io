@@ -11,15 +11,15 @@ Recovered fragments from closed work, failed attempts, and flagged subjects.
 **status:** closed
 
 **summary:**  
-Attempted to unify multiple AI models under a single orchestration layer.
+Tried to wrap ChatGPT, Claude, and Gemini into one "super app" that would pick the best answer for me.
 
 **failure mode:**  
-Coordination overhead exceeded value gained.  
-Latency and arbitration ambiguity degraded output quality.
+It was too slow and complicated.  
+The "manager" AI spent more time arguing with the others than actually working.
 
 **resolution:**  
-Project terminated.  
-Architecture replaced with task-specific AI workflows.
+Killed it.  
+Now I just use the right tool for the job manually.
 
 ---
 
@@ -28,14 +28,14 @@ Architecture replaced with task-specific AI workflows.
 ### Consensus Arbitration
 
 **objective:**  
-Select the “best” answer across multiple AI outputs.
+Get three AIs to agree on an answer so I know it's true.
 
 **finding:**  
-Agreement amplified shared bias.  
-Confidence increased while correctness degraded.
+They usually just agreed on the same hallucination.  
+It didn't make the answers better, just more confident and wrong.
 
 **note:**  
-Consensus without provenance is noise.
+Groupthink applies to bots too.
 
 ---
 
@@ -46,11 +46,11 @@ Consensus without provenance is noise.
 **status:** observed
 
 **question:**  
-When multiple models contribute to an output,  
-can the decision path be reconstructed after the fact?
+If I use three different models to write a paper, who actually wrote it? And can I prove it later?
 
 **note:**  
-Problem acknowledged. No clean solution identified.
+Right now, the answer is "no idea."  
+That's going to be a problem.
 
 ---
 
@@ -62,9 +62,9 @@ Problem acknowledged. No clean solution identified.
 Generative UI / "Liquid" Interfaces
 
 **hypothesis:**  
-The interface should not be static.  
-It should adapt to the user's intent in real-time.
+Websites feel dead. They sit there waiting for clicks.  
+The interface should change based on what I'm trying to do right now.
 
 **current status:**  
-Gathering signal.
-Prototype pending.
+Thinking about it.  
+No code yet.
