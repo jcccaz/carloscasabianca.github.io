@@ -678,8 +678,11 @@ hr {
     display: grid;
     grid-template-columns: 80px 1fr 150px;
     align-items: center;
-    padding: 24px 12px;
-    /* slightly more padding for the box feel */
+    align-items: center;
+    padding: 16px 0;
+    /* Slimmer, sleeker */
+    margin-bottom: 24px;
+    /* Ensure gap between items */
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     /* Passive border */
     transition: all 0.4s ease;
