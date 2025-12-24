@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab — Carlos Casabianca</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,48 +13,62 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="lab-page"> <!-- Using lab-page class for correct layout -->
 
-    <header class="section-hero">
-        <a href="index.html" class="back">← Home</a>
-        <h1>Lab</h1>
+    <header class="home-header" style="padding: 40px 60px;">
+        <div class="home-id">
+            <div class="logo-monogram"><span>J</span><span>C</span><span>C</span></div>
+            <div class="id-text">
+                <h1>J. Carlos Casabianca</h1>
+                <div class="header-subline">NOVA · <span class="gps-fix">38.90° N, 77.04° W</span></div>
+            </div>
+        </div>
+        <nav class="secondary-nav">
+            <a href="index.html">Home</a>
+            <!-- Keep other nav items if needed, or just Home for "Close Concept" feel -->
+        </nav>
     </header>
 
-    <main class="container">
+    <div class="lab-container">
+        <div class="lab-header">
+            <div class="lab-title">Laboratory // Index</div>
+            <div class="lab-stat">SYS.STATUS: ONLINE</div>
+        </div>
 
-        <article class="project">
-            <a href="projects/franknet.html">
-                <h2>FrankNet</h2>
-            </a>
-            <p class="project-meta">Ongoing · networks · ai · operations</p>
-            <p>
-                FrankNet is a personal systems laboratory exploring network
-                infrastructure, AI orchestration, and operational security.
-                It blends physical hardware and experimental workflows.
-            </p>
-            <div class="project-links">
-                <a href="projects/franknet.html">Details</a>
-                <a href="#">Architecture</a>
+        <!-- REAL PROJECT 1: FrankNet -->
+        <a href="projects/franknet.html" class="project-file">
+            <div class="scan-beam"></div>
+            <div class="file-id">001</div>
+            <div class="file-info">
+                <div class="file-name">FrankNet</div>
+                <div class="file-meta">Network Infrastructure / PyTorch / Ops</div>
             </div>
-        </article>
+            <div class="file-status">ONGOING</div>
+        </a>
 
-        <article class="project">
-            <a href="projects/ai-ops.html">
-                <h2>AI Operations Research</h2>
-            </a>
-            <p class="project-meta">2024–2025 · systems · ai · operations</p>
-            <p>
-                A series of papers and internal-style documents examining how
-                AI systems behave under operational stress, ambiguity, and
-                long-term usage.
-            </p>
-            <div class="project-links">
-                <a href="projects/ai-ops.html">Details</a>
-                <a href="#">Papers</a>
+        <!-- REAL PROJECT 2: AI Ops -->
+        <a href="projects/ai-ops.html" class="project-file">
+            <div class="scan-beam"></div>
+            <div class="file-id">002</div>
+            <div class="file-info">
+                <div class="file-name">AI Operations Research</div>
+                <div class="file-meta">Analysis / Long-term Usage / Stress</div>
             </div>
-        </article>
+            <div class="file-status">2024-2025</div>
+        </a>
 
-    </main>
+        <!-- MOCK DATA TO FILL THE LIST (Optional, makes it look better) -->
+        <a href="#" class="project-file" style="opacity: 0.5; pointer-events: none;">
+            <div class="scan-beam"></div>
+            <div class="file-id">003</div>
+            <div class="file-info">
+                <div class="file-name">Void Stream</div>
+                <div class="file-meta">WebGL / Audio Reactive</div>
+            </div>
+            <div class="file-status">ARCHIVED</div>
+        </a>
+
+    </div>
 
 </body>
 
