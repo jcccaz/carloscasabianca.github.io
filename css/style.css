@@ -4,7 +4,7 @@
    Background: Subtle Honeycomb Mesh
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;800&family=JetBrains+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;800&family=JetBrains+Mono:wght@300&family=Playfair+Display:ital,wght@1,600&family=UnifrakturMaguntia&display=swap');
 
 /* RESET */
 * {
@@ -21,10 +21,13 @@
     --gold-glow: rgba(197, 160, 89, 0.4);
     --font-display: 'Outfit', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
+    --font-serif: 'Playfair Display', serif;
 }
 
 /* BASE */
 body {
+    font-size: 18px;
+    /* Base size increase */
     font-family: var(--font-display);
     background: var(--bg);
     color: var(--text);
@@ -33,21 +36,38 @@ body {
 }
 
 /* HOME PAGE */
-.home {
+/* HOME PAGE */
+.home,
+.lab-page {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px 60px;
+    /* align-items: center;  <-- REMOVED universal center alignment for shared class */
+    /* justify-content: space-between; <-- REMOVED universal space-between */
+    padding: 0;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+    /* Allow scrolling y */
     /* 3D DEPTH: Radial spotlight to create a 'deep room' feel */
     background: radial-gradient(circle at center, #1a1a1d 0%, #050505 100%);
 }
 
+.home {
+    /* Restore home specific alignment */
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 60px;
+    overflow: hidden;
+}
+
+.lab-page {
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
 /* REFINED HONEYCOMB BACKGROUND */
-.home::before {
+.home::before,
+.lab-page::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -80,45 +100,129 @@ body {
     z-index: 100;
 }
 
+/* HEADER IDENTITY (Tactical Design) */
 .home-id {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-/* Logo: SVG CC */
-.logo-cc {
-    width: 48px;
-    height: 48px;
-    filter: drop-shadow(0 0 10px rgba(197, 160, 89, 0.4));
-    transition: filter 0.3s ease;
+/* Monogram: JCC (Gothic Seal) */
+.logo-monogram {
+    width: auto;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center align for a seal look */
+    justify-content: center;
+    font-family: 'UnifrakturMaguntia', cursive;
+    /* Old English / Gothic */
+    font-weight: 400;
+    font-size: 24px;
+    /* Much larger to show detail */
+    color: var(--gold);
+    line-height: 0.6;
+    /* Very tight stacking */
+    padding: 0;
+    border-left: none;
+    /* No spine */
+    background: transparent;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 10px rgba(197, 160, 89, 0.3);
+    /* Mystical glow */
 }
 
-.home-id:hover .logo-cc {
-    filter: drop-shadow(0 0 20px rgba(197, 160, 89, 0.7));
+.logo-monogram span {
+    display: block;
+    opacity: 1;
+    letter-spacing: 0;
+}
+
+/* Specific letter tweaks */
+.logo-monogram span:nth-child(1) {
+    /* J */
+    font-size: 42px;
+    /* The 'Drop Cap' J is dominant */
+    margin-bottom: -5px;
+}
+
+.logo-monogram span:nth-child(2) {
+    /* C */
+    font-size: 20px;
+}
+
+.logo-monogram span:nth-child(3) {
+    /* C */
+    font-size: 20px;
+}
+
+.logo-monogram:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 20px rgba(197, 160, 89, 0.6);
+    background: transparent;
+    padding-left: 0;
+    box-shadow: none;
 }
 
 .id-text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
 }
 
 .home-id h1 {
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 0.05em;
+    font-family: 'Outfit', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
     color: var(--gold);
-    line-height: 1.2;
+    /* REVERTED TO GOLD per user request */
+    line-height: 1.1;
+    text-transform: uppercase;
 }
 
 .header-subline {
     font-family: var(--font-mono);
-    font-size: 9px;
+    font-size: 14px;
     color: var(--gold);
-    opacity: 0.5;
+    opacity: 0.7;
     letter-spacing: 0.15em;
     text-transform: uppercase;
+    margin-top: 4px;
+}
+
+/* GPS Animation */
+.gps-fix {
+    display: inline-block;
+    animation: gpsFlicker 3s infinite alternate;
+}
+
+@keyframes gpsFlicker {
+    0% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 1;
+        text-shadow: 0 0 5px var(--gold);
+    }
+
+    52% {
+        opacity: 0.4;
+    }
+
+    54% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
 }
 
 /* SECONDARY NAV (Top Right) */
@@ -130,12 +234,12 @@ body {
 
 .secondary-nav a {
     font-family: var(--font-mono);
-    font-size: 11px;
+    font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--gold);
     text-decoration: none;
-    opacity: 0.6;
+    opacity: 0.85;
     transition: opacity 0.3s ease;
     position: relative;
 }
@@ -176,6 +280,10 @@ body {
 
 .smoke-plume {
     max-height: 80vh;
+    /* The canvas renders internally, just need to constrain it visually */
+    aspect-ratio: 1/1;
+    width: auto;
+    height: 80vh;
     opacity: 0.6;
     /* 
        Seamless Masking 
@@ -186,6 +294,11 @@ body {
     mask-image: radial-gradient(circle at center, black 0%, black 40%, transparent 70%);
     mix-blend-mode: screen;
     /* clearer blend with background */
+    transition: filter 0.5s ease;
+}
+
+.smoke-plume.gust {
+    filter: blur(5px) brightness(1.5);
 }
 
 .smoke-plume {
@@ -244,7 +357,7 @@ body {
     width: 1px;
     height: 50px;
     background: var(--gold);
-    opacity: 0.3;
+    opacity: 0.5;
     transition: all 0.4s ease;
 }
 
@@ -256,9 +369,9 @@ body {
 
 .concept-label {
     font-family: var(--font-mono);
-    font-size: 10px;
+    font-size: 14px;
     color: var(--gold);
-    opacity: 0.6;
+    opacity: 0.85;
     letter-spacing: 0.3em;
     text-transform: uppercase;
     transition: all 0.4s ease;
@@ -279,14 +392,14 @@ body {
 }
 
 .section-hero h1 {
-    font-size: 48px;
+    font-size: 56px;
     font-weight: 300;
     margin-bottom: 16px;
     color: var(--gold);
 }
 
 .section-hero p {
-    font-size: 18px;
+    font-size: 20px;
     opacity: 0.7;
     max-width: 600px;
     margin: 0;
@@ -302,7 +415,7 @@ body {
 }
 
 .article-hero h1 {
-    font-size: 42px;
+    font-size: 48px;
     font-weight: 300;
     color: var(--gold);
     margin-bottom: 16px;
@@ -324,7 +437,7 @@ body {
 
 .content p {
     margin-bottom: 24px;
-    font-size: 17px;
+    font-size: 20px;
     line-height: 1.8;
 }
 
@@ -347,7 +460,7 @@ body {
     font-family: var(--font-mono);
     color: var(--gold);
     opacity: 0.6;
-    font-size: 11px;
+    font-size: 13px;
 }
 
 p,
@@ -393,7 +506,7 @@ hr {
 
 .note-link {
     font-family: var(--font-mono);
-    font-size: 12px;
+    font-size: 14px;
     color: var(--gold);
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -426,10 +539,10 @@ hr {
 
 .project-links a {
     font-family: var(--font-mono);
-    font-size: 10px;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    opacity: 0.6;
+    opacity: 0.85;
 }
 
 .project-links a:hover {
@@ -485,7 +598,7 @@ hr {
 .leak-text {
     margin-top: 40px;
     font-family: var(--font-mono);
-    font-size: 11px;
+    font-size: 14px;
     color: var(--gold);
     opacity: 0.4;
     letter-spacing: 0.2em;
@@ -522,5 +635,287 @@ hr {
     100% {
         opacity: 0.6;
         transform: translateY(-5px);
+    }
+}
+
+/* LAB / PROJECTS (Holographic Design) */
+.lab-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 120px 24px;
+}
+
+.lab-header {
+    margin-bottom: 80px;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+    padding-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.lab-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+}
+
+.lab-stat {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--gold);
+    opacity: 0.5;
+}
+
+/* THE FILE SYSTEM GRID */
+/* THE FILE SYSTEM GRID */
+.project-file {
+    position: relative;
+    display: grid;
+    grid-template-columns: 80px 1fr 150px;
+    align-items: center;
+    padding: 24px 12px;
+    /* slightly more padding for the box feel */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    /* Passive border */
+    transition: all 0.4s ease;
+    cursor: pointer;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+/* LASER BORDER: Top Line */
+.project-file::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: width 0.3s ease-out;
+    /* Fast, crisp */
+    z-index: 2;
+}
+
+/* LASER BORDER: Bottom Line */
+.project-file::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: width 0.3s ease-out;
+    z-index: 2;
+}
+
+/* On Hover: Draw the lines */
+.project-file:hover::before {
+    width: 100%;
+}
+
+.project-file:hover::after {
+    width: 100%;
+}
+
+/* Background Highlight (Subtle) */
+.project-file:hover {
+    background: rgba(197, 160, 89, 0.02);
+    /* Remove old border color change since we are drawing new ones */
+    border-bottom-color: transparent;
+}
+
+/* COLUMNS */
+.file-id {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: white;
+    /* Contrast pop */
+    opacity: 0.8;
+}
+
+.file-info {
+    z-index: 1;
+}
+
+.file-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    color: #d0d0d0;
+    margin-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+.project-file:hover .file-name {
+    color: var(--gold);
+}
+
+.file-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.file-status {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--gold);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    padding: 4px 8px;
+    text-align: center;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.project-file:hover .file-status {
+    opacity: 1;
+    background: rgba(197, 160, 89, 0.1);
+    box-shadow: 0 0 10px rgba(197, 160, 89, 0.2);
+}
+
+/* Responsive adjustments for Lab */
+@media (max-width: 768px) {
+    .project-file {
+        grid-template-columns: 50px 1fr;
+        gap: 12px;
+    }
+
+    .file-status {
+        display: none;
+    }
+}
+
+/* BACK NAVIGATION BUTTON */
+.back {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    /* Pushes to the RIGHT edge */
+    margin-right: 0;
+
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-family: var(--font-mono);
+    margin-bottom: 40px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+}
+
+.back:hover {
+    opacity: 1;
+    border-bottom: 1px solid var(--gold);
+    padding-right: 4px;
+    /* Slight slide leftwards? or just padding-left. Usually back arrows point left. */
+    /* Let's keep the padding-left slide if user liked it, or switch to padding-right if aligned right. */
+    /* If aligned right, sliding left feels more natural for "back". */
+}
+
+/* MOBILE OPTIMIZATIONS */
+@media (max-width: 768px) {
+
+    /* 1. Bump base font size */
+    body {
+        font-size: 16px;
+    }
+
+    /* Fix horizontal scroll/pinch on home */
+    .home {
+        padding: 80px 20px;
+        /* Reduced side padding (was 60px) */
+    }
+
+    .home-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 0 !important;
+        /* Override inline styles if any */
+    }
+
+    /* 2. Header Adjustments */
+    .home-id h1 {
+        font-size: 24px;
+        /* Fit on one line */
+    }
+
+    .header-subline {
+        font-size: 11px;
+    }
+
+    .logo-monogram span:nth-child(1) {
+        font-size: 32px;
+        /* Smaller iconic J */
+    }
+
+    /* 3. Text Content */
+    .content p,
+    .note-text {
+        font-size: 21px;
+        /* Large, comfortable reading size */
+        line-height: 1.6;
+    }
+
+    /* 4. Project Files (Lab) - SHOW BUTTON */
+    .project-file {
+        /* ID | Content | Button */
+        grid-template-columns: 40px 1fr 70px;
+        gap: 12px;
+        padding: 20px 0;
+        /* Tighter padding */
+    }
+
+    .file-name {
+        font-size: 18px;
+        /* Slightly smaller to fit grid */
+        line-height: 1.2;
+    }
+
+    .file-meta {
+        font-size: 11px;
+    }
+
+    .file-id {
+        font-size: 11px;
+    }
+
+    .file-status {
+        display: block;
+        /* RESTORE BUTTON */
+        font-size: 10px;
+        padding: 6px 4px;
+        /* Touch friendly */
+    }
+
+    /* 5. Nav */
+    .secondary-nav {
+        gap: 20px;
+        flex-wrap: wrap;
+        /* allow wrapping if needed */
+    }
+
+    .secondary-nav a {
+        font-size: 12px;
+    }
+
+    /* 6. Back Button */
+    .back {
+        font-size: 14px;
+        /* Easy tap target */
+        padding: 10px 0;
+        /* Larger touch area */
     }
 }
