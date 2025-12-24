@@ -43,15 +43,14 @@ Consensus without provenance is noise.
 
 ### AI Decision Provenance
 
+**status:** observed
+
 **question:**  
 When multiple models contribute to an output,  
 can the decision path be reconstructed after the fact?
 
-**risk:**  
-Outputs without traceable origin cannot be audited or defended.
-
-**status:**  
-Unresolved.
+**note:**  
+Problem acknowledged. No clean solution identified.
 
 ---
 
