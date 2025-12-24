@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archive — Carlos Casabianca</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,30 +13,41 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="lab-page"> <!-- Unified Layout -->
 
-    <header class="section-hero">
-        <a href="index.html" class="back">← Home</a>
-        <h1>Archive</h1>
+    <header class="home-header" style="padding: 40px 60px;">
+        <div class="home-id">
+            <div class="logo-monogram"><span>J</span><span>C</span><span>C</span></div>
+            <div class="id-text">
+                <h1>J. Carlos Casabianca</h1>
+                <div class="header-subline">NOVA · <span class="gps-fix">38.90° N, 77.04° W</span></div>
+            </div>
+        </div>
+        <nav class="secondary-nav">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Lab</a>
+            <a href="papers.html">Archive</a>
+        </nav>
     </header>
 
-    <main class="container">
+    <main class="lab-container">
 
-        <article class="project">
-            <a href="papers/minimalism.html">
-                <h2>The Future of Minimalism</h2>
-            </a>
-            <p class="project-meta">Dec 2025 · design · philosophy</p>
+        <div class="lab-header">
+            <div class="lab-title">Archive // Papers</div>
+            <div class="lab-stat">INDEX: 001</div>
+        </div>
 
-            <p>
-                An exploration of how minimalist principles adapt to the
-                increasingly complex landscape of AI and data-driven systems.
-            </p>
-
-            <div class="project-links">
-                <a href="papers/minimalism.html">Read Paper</a>
-            </div>
-        </article>
+        <div class="notes-list">
+            <!-- Using project-file structure for Papers too -->
+            <article class="project-file">
+                <span class="file-id">P-01</span>
+                <div>
+                    <h3 class="file-name" style="font-size: 18px; margin:0;">The Future of Minimalism</h3>
+                    <p class="file-meta" style="margin-top: 4px;">Dec 2025 · design · philosophy</p>
+                </div>
+                <a href="papers/minimalism.html" class="file-status" style="text-decoration: none;">VIEW</a>
+            </article>
+        </div>
 
     </main>
 

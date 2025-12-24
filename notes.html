@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fragments — Carlos Casabianca</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,51 +13,67 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="lab-page"> <!-- Unified Layout -->
 
-    <header class="section-hero">
-        <a href="index.html" class="back">← Home</a>
-        <h1>Fragments</h1>
+    <header class="home-header" style="padding: 40px 60px;">
+        <div class="home-id">
+            <div class="logo-monogram"><span>J</span><span>C</span><span>C</span></div>
+            <div class="id-text">
+                <h1>J. Carlos Casabianca</h1>
+                <div class="header-subline">NOVA · <span class="gps-fix">38.90° N, 77.04° W</span></div>
+            </div>
+        </div>
+        <nav class="secondary-nav">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Lab</a>
+            <a href="papers.html">Archive</a>
+        </nav>
     </header>
 
-    <main class="container">
+    <main class="lab-container"> <!-- Reuse Lab Container for consistent spacing -->
+
+        <div class="lab-header">
+            <div class="lab-title">Fragments // Notes</div>
+            <div class="lab-stat">INDEX: 003</div>
+        </div>
 
         <div class="notes-list">
-            <article class="note-item">
-                <a href="notes/fragment-001.html" class="note-link">
-                    <span class="note-id">001</span>
-                    <div>
-                        <p class="note-text">Consistency failures often look like confidence.</p>
-                        <span class="meta">Dec 18, 2025 · systems · ai</span>
-                    </div>
-                </a>
+            <article class="project-file"> <!-- Reusing project-file class for the Laser Draw effect! -->
+                <span class="file-id">001</span>
+                <div>
+                    <h3 class="file-name" style="font-size: 18px; margin:0;">Consistency failures often look like
+                        confidence.</h3>
+                    <p class="file-meta" style="margin-top: 4px;">Dec 18, 2025 · systems · ai</p>
+                </div>
+                <a href="notes/fragment-001.html" class="file-status" style="text-decoration: none;">READ</a>
             </article>
 
-            <article class="note-item">
-                <a href="notes/fragment-002.html" class="note-link">
-                    <span class="note-id">002</span>
-                    <div>
-                        <p class="note-text">Most systems fail quietly before they fail publicly.</p>
-                        <span class="meta">Dec 12, 2025 · security · operations</span>
-                    </div>
-                </a>
+            <article class="project-file">
+                <span class="file-id">002</span>
+                <div>
+                    <h3 class="file-name" style="font-size: 18px; margin:0;">Most systems fail quietly before they fail
+                        publicly.</h3>
+                    <p class="file-meta" style="margin-top: 4px;">Dec 12, 2025 · security · operations</p>
+                </div>
+                <a href="notes/fragment-002.html" class="file-status" style="text-decoration: none;">READ</a>
             </article>
 
-            <article class="note-item">
-                <a href="notes/fragment-003.html" class="note-link">
-                    <span class="note-id">003</span>
-                    <div>
-                        <p class="note-text">Documentation is a form of delayed thinking.</p>
-                        <span class="meta">Nov 30, 2025 · writing · design</span>
-                    </div>
-                </a>
+            <article class="project-file">
+                <span class="file-id">003</span>
+                <div>
+                    <h3 class="file-name" style="font-size: 18px; margin:0;">Documentation is a form of delayed
+                        thinking.</h3>
+                    <p class="file-meta" style="margin-top: 4px;">Nov 30, 2025 · writing · design</p>
+                </div>
+                <a href="notes/fragment-003.html" class="file-status" style="text-decoration: none;">READ</a>
             </article>
         </div>
 
         <div style="margin-top: 120px; text-align: center;">
             <a href="leak.html"
-                style="font-family: var(--font-mono); font-size: 10px; opacity: 0.2; letter-spacing: 0.2em; text-transform: uppercase;">unresolved
-                material</a>
+                style="font-family: var(--font-mono); font-size: 10px; opacity: 0.2; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; color: var(--gold);">
+                &gt; UNRESOLVED MATERIAL
+            </a>
         </div>
     </main>
 
