@@ -706,6 +706,24 @@ hr {
     z-index: 2;
 }
 
+.project-file::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: width 0.3s ease-out;
+    z-index: 2;
+}
+
+/* On Hover: Draw both lines */
+.project-file:hover::before,
+.project-file:hover::after {
+    width: 100%;
+}
+
 /* SCANLINE REMOVED - CLEAN LASERS ONLY */
 
 /* COLUMNS */
