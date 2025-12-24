@@ -641,10 +641,9 @@ hr {
 /* LAB / PROJECTS (Holographic Design) */
 /* LAB / PROJECTS (Holographic Design) */
 .lab-container {
-    width: 100%;
-    margin: 0;
-    padding: 40px 60px 120px;
-    /* Aligned with header padding */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 120px 24px;
 }
 
 .lab-header {
