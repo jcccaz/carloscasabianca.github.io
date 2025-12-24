@@ -172,22 +172,51 @@
         }
 
         /* AUDIO TOGGLE - Discreet */
-        .audio-toggle {
+        .audio-control-container {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 30px;
+            right: 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 100;
+        }
+
+        .audio-label {
+            font-size: 10px;
+            color: var(--gold);
+            opacity: 0.6;
+            letter-spacing: 0.1em;
+            animation: pulseText 2s infinite;
+        }
+
+        @keyframes pulseText {
+
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+        }
+
+        .audio-toggle {
+            /* Removed absolute positioning since it is in flex container now */
             width: 30px;
             height: 30px;
             border: 1px solid rgba(197, 160, 89, 0.3);
             border-radius: 50%;
             background: transparent;
             cursor: pointer;
-            z-index: 100;
             display: flex;
             align-items: center;
             justify-content: center;
-            opacity: 0.5;
+            opacity: 0.8;
+            /* More visible */
             transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(197, 160, 89, 0.1);
         }
 
         .audio-toggle:hover {
@@ -226,9 +255,12 @@
     <audio id="leak-audio" src="assets/voice_preview_franknet.mp3"></audio>
 
     <!-- AUDIO TOGGLE -->
-    <button id="leak-toggle" class="audio-toggle" title="Play Fragment Audio">
-        <div class="audio-icon"></div>
-    </button>
+    <div class="audio-control-container">
+        <span class="audio-label">TRANSMISSION DETECTED</span>
+        <button id="leak-toggle" class="audio-toggle" title="Play Fragment Audio">
+            <div class="audio-icon"></div>
+        </button>
+    </div>
 
     <div class="terminal-container">
         <ul class="log-stream" id="logStream">
