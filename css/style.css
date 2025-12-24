@@ -687,8 +687,18 @@ hr {
     text-decoration: none;
 }
 
-/* LASER BORDER: Top Line */
+/* Background Highlight (Subtle Glass) */
+.project-file:hover {
+    background: linear-gradient(90deg,
+            rgba(197, 160, 89, 0) 0%,
+            rgba(197, 160, 89, 0.05) 20%,
+            rgba(197, 160, 89, 0.02) 100%);
+    border-bottom-color: transparent;
+}
+
+/* THE SCANNER ANIMATION */
 .project-file::before {
+    /* Existing top border style... keeping logic, adding animation capability */
     content: '';
     position: absolute;
     top: 0;
@@ -697,37 +707,32 @@ hr {
     height: 1px;
     background: var(--gold);
     transition: width 0.3s ease-out;
-    /* Fast, crisp */
     z-index: 2;
+    box-shadow: 0 0 10px var(--gold);
+    /* Add glow to the laser */
 }
 
-/* LASER BORDER: Bottom Line */
-.project-file::after {
-    content: '';
+/* SCANLINE BEAM */
+.project-file .scan-beam {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: var(--gold);
-    transition: width 0.3s ease-out;
-    z-index: 2;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(197, 160, 89, 0.1),
+            transparent);
+    transform: skewX(-20deg);
+    pointer-events: none;
+    z-index: 1;
+    transition: left 0s;
+    /* Instant reset */
 }
 
-/* On Hover: Draw the lines */
-.project-file:hover::before {
-    width: 100%;
-}
-
-.project-file:hover::after {
-    width: 100%;
-}
-
-/* Background Highlight (Subtle) */
-.project-file:hover {
-    background: rgba(197, 160, 89, 0.02);
-    /* Remove old border color change since we are drawing new ones */
-    border-bottom-color: transparent;
+.project-file:hover .scan-beam {
+    left: 200%;
+    transition: left 0.6s ease-in-out;
 }
 
 /* COLUMNS */
@@ -735,12 +740,21 @@ hr {
     font-family: 'JetBrains Mono', monospace;
     font-size: 14px;
     color: white;
-    /* Contrast pop */
     opacity: 0.8;
+    transition: all 0.2s ease;
+}
+
+/* GLITCH SCRAMBLE EFFECT STUB (Visual flicker) */
+.project-file:hover .file-id {
+    color: var(--gold);
+    text-shadow: 2px 0 0 rgba(255, 0, 0, 0.5), -2px 0 0 rgba(0, 0, 255, 0.5);
+    /* Chromatic Abberation */
 }
 
 .file-info {
-    z-index: 1;
+    z-index: 2;
+    /* Lift above beam */
+    position: relative;
 }
 
 .file-name {
@@ -753,7 +767,8 @@ hr {
 }
 
 .project-file:hover .file-name {
-    color: var(--gold);
+    color: white;
+    text-shadow: 0 0 15px rgba(197, 160, 89, 0.3);
 }
 
 .file-meta {
@@ -762,6 +777,11 @@ hr {
     color: #666;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+
+.project-file:hover .file-meta {
+    color: var(--gold);
 }
 
 .file-status {
@@ -773,12 +793,16 @@ hr {
     text-align: center;
     opacity: 0.6;
     transition: all 0.3s ease;
+    background: transparent;
+    z-index: 2;
+    position: relative;
 }
 
 .project-file:hover .file-status {
     opacity: 1;
     background: rgba(197, 160, 89, 0.1);
-    box-shadow: 0 0 10px rgba(197, 160, 89, 0.2);
+    box-shadow: 0 0 15px rgba(197, 160, 89, 0.4);
+    border-color: var(--gold);
 }
 
 /* Responsive adjustments for Lab */
