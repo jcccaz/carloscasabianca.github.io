@@ -160,8 +160,14 @@
             /* Behind terminal (10) but above body */
             opacity: 0.15;
             /* VERY SUBTLE */
-            filter: grayscale(100%) sepia(100%) hue-rotate(5deg) contrast(1.2);
+
+            /* High contrast pushes grays to black. Mask fades edges to transparent. */
+            filter: grayscale(100%) sepia(100%) hue-rotate(5deg) contrast(1.5) brightness(0.8);
             mix-blend-mode: screen;
+
+            -webkit-mask-image: radial-gradient(circle, black 30%, transparent 80%);
+            mask-image: radial-gradient(circle, black 30%, transparent 80%);
+
             pointer-events: none;
         }
 
