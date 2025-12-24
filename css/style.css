@@ -732,6 +732,8 @@ hr {
     font-size: 14px;
     color: white;
     opacity: 0.8;
+    text-align: left;
+    /* Force Left */
 }
 
 /* GLITCH SCRAMBLE EFFECT STUB (Visual flicker) */
@@ -741,6 +743,8 @@ hr {
 
 .file-info {
     z-index: 1;
+    text-align: left;
+    /* Force Left */
 }
 
 .file-name {
