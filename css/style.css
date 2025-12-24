@@ -717,22 +717,26 @@ hr {
     position: absolute;
     top: 0;
     left: -100%;
-    width: 50%;
+    width: 60%;
+    /* Slightly wider for softer edge */
     height: 100%;
     background: linear-gradient(90deg,
             transparent,
-            rgba(197, 160, 89, 0.1),
+            rgba(197, 160, 89, 0.08),
+            /* Even more subtle */
             transparent);
     transform: skewX(-20deg);
     pointer-events: none;
     z-index: 1;
     transition: left 0s;
-    /* Instant reset */
 }
 
 .project-file:hover .scan-beam {
     left: 200%;
-    transition: left 0.6s ease-in-out;
+    /* SLOWED DOWN: 1.5s is much more deliberate and "heavy" */
+    transition: left 1.5s ease-in-out;
+    transition-delay: 0.1s;
+    /* Wait for laser borders to start */
 }
 
 /* COLUMNS */
