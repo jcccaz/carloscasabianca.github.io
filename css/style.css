@@ -687,18 +687,14 @@ hr {
     text-decoration: none;
 }
 
-/* Background Highlight (Subtle Glass) */
+/* Background Highlight (Subtle) */
 .project-file:hover {
-    background: linear-gradient(90deg,
-            rgba(197, 160, 89, 0) 0%,
-            rgba(197, 160, 89, 0.05) 20%,
-            rgba(197, 160, 89, 0.02) 100%);
+    background: rgba(197, 160, 89, 0.02);
     border-bottom-color: transparent;
 }
 
-/* THE SCANNER ANIMATION */
+/* THE LASER BORDER ANIMATION (Restored) */
 .project-file::before {
-    /* Existing top border style... keeping logic, adding animation capability */
     content: '';
     position: absolute;
     top: 0;
@@ -708,36 +704,9 @@ hr {
     background: var(--gold);
     transition: width 0.3s ease-out;
     z-index: 2;
-    box-shadow: 0 0 10px var(--gold);
-    /* Add glow to the laser */
 }
 
-/* SCANLINE BEAM */
-.project-file .scan-beam {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 60%;
-    /* Slightly wider for softer edge */
-    height: 100%;
-    background: linear-gradient(90deg,
-            transparent,
-            rgba(197, 160, 89, 0.08),
-            /* Even more subtle */
-            transparent);
-    transform: skewX(-20deg);
-    pointer-events: none;
-    z-index: 1;
-    transition: left 0s;
-}
-
-.project-file:hover .scan-beam {
-    left: 200%;
-    /* SLOWED DOWN: 1.5s is much more deliberate and "heavy" */
-    transition: left 1.5s ease-in-out;
-    transition-delay: 0.1s;
-    /* Wait for laser borders to start */
-}
+/* SCANLINE REMOVED - CLEAN LASERS ONLY */
 
 /* COLUMNS */
 .file-id {
@@ -745,20 +714,15 @@ hr {
     font-size: 14px;
     color: white;
     opacity: 0.8;
-    transition: all 0.2s ease;
 }
 
 /* GLITCH SCRAMBLE EFFECT STUB (Visual flicker) */
 .project-file:hover .file-id {
     color: var(--gold);
-    text-shadow: 2px 0 0 rgba(255, 0, 0, 0.5), -2px 0 0 rgba(0, 0, 255, 0.5);
-    /* Chromatic Abberation */
 }
 
 .file-info {
-    z-index: 2;
-    /* Lift above beam */
-    position: relative;
+    z-index: 1;
 }
 
 .file-name {
@@ -771,8 +735,7 @@ hr {
 }
 
 .project-file:hover .file-name {
-    color: white;
-    text-shadow: 0 0 15px rgba(197, 160, 89, 0.3);
+    color: var(--gold);
 }
 
 .file-meta {
@@ -781,11 +744,11 @@ hr {
     color: #666;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    transition: color 0.3s ease;
 }
 
 .project-file:hover .file-meta {
-    color: var(--gold);
+    /* No color change on meta, keep it subtle */
+    color: #666;
 }
 
 .file-status {
@@ -798,14 +761,12 @@ hr {
     opacity: 0.6;
     transition: all 0.3s ease;
     background: transparent;
-    z-index: 2;
-    position: relative;
 }
 
 .project-file:hover .file-status {
     opacity: 1;
     background: rgba(197, 160, 89, 0.1);
-    box-shadow: 0 0 15px rgba(197, 160, 89, 0.4);
+    box-shadow: 0 0 10px rgba(197, 160, 89, 0.2);
     border-color: var(--gold);
 }
 
