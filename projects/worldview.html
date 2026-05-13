@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Korum WorldView — Carlos Casabianca</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header class="article-hero">
+        <a href="../projects.html" class="back">← Projects</a>
+    </header>
+
+    <main class="content">
+
+        <h1>Korum WorldView</h1>
+        <p class="project-meta">2025–present · geospatial intelligence · signal correlation · real-time ops</p>
+
+        <h2>Focus</h2>
+        <p>
+            Korum WorldView is a real-time geospatial signal intelligence layer that feeds upstream
+            into the KorumOS Neural Council. It correlates live data streams across aircraft, satellites,
+            ships, weather, cyber activity, GPS jamming, internet health, and news — then escalates
+            compressed anomaly packets to the Council when correlated signals cross severity thresholds.
+        </p>
+
+        <h2>Signal Sources</h2>
+        <ul>
+            <li>Aircraft tracking — FlightRadar24 / OpenSky</li>
+            <li>Satellite positions — N2YO TLE orbital data</li>
+            <li>Maritime AIS — AISHub ship movements</li>
+            <li>Cyber threat feeds — AlienVault OTX, AbuseIPDB</li>
+            <li>Weather — Windy API</li>
+            <li>GPS jamming, internet health, news, social signals</li>
+        </ul>
+
+        <h2>Severity Gate</h2>
+        <ul>
+            <li><strong>WATCH</strong> — Alert panel only. No AI action required.</li>
+            <li><strong>ALERT</strong> — Alert panel + manual Council trigger enabled.</li>
+            <li><strong>CRITICAL</strong> — Auto-escalates to KorumOS Council with compressed context packet.</li>
+        </ul>
+
+        <h2>Architecture</h2>
+        <p>
+            Correlation runs on H3 hexagonal grid cells (~1,770 km²) with a 30-minute sliding window.
+            Escalation packets are capped at ~250 tokens — enough for the Council to understand the
+            situation without requiring the full raw event payload.
+        </p>
+
+    </main>
+
+</body>
+
+</html>
