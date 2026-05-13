@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (window.initSmoke) {
         window.initSmoke();
     }
-<<<<<<< HEAD
-=======
 
     navLinks.forEach(link => {
         link.addEventListener('click', function (e) {
@@ -27,5 +25,4 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 800); // 800ms delay to watch the smoke fly
         });
     });
->>>>>>> 9d28686 (feat: Implement Leak Terminal with markdown loader and gold noir aesthetic)
 });
